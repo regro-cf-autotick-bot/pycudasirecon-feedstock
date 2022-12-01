@@ -1,5 +1,5 @@
 {% set name = "pycudasirecon" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tlambert03/pycudasirecon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 7c51a06d2789212df029506c7d091c589edecfb0395aa8ef3534b3fb578fb9e3
+  sha256: fe3c0a2f9ddeedb57ab5aaa81b761e5ca5f3728f70f5db78c022fe3fbb53e446
 
 build:
   number: 0
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python wrapper for cudasirecon - GPU accelerated SIM reconstruction'
+  summary: Python wrapper for cudasirecon - GPU accelerated SIM reconstruction
   description: |
     This package provides a python wrapper and convenience functions for cudasirecon,
     a CUDA-accelerated implementation of the Gustafsson SIM reconstruction algorithm.
