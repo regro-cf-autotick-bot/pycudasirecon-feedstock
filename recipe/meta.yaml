@@ -10,16 +10,16 @@ source:
   sha256: 0d8543008115c85c481f5280777a270aab6c0c7dc733a6ada2b68afc88ea944c
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy
     - pydantic
     - cudasirecon
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/tlambert03/pycudasirecon
